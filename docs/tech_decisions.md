@@ -35,3 +35,9 @@ seed will give you the same result regardless of package version. `StdRng` and
 `SmallRng`, while deterministic, are not portable. Ultimately,
 `Xoshiro128PlusPlus` was chosen due to meeting the deterministic and portability
 criteria.
+
+## TD-007 FakeRng
+
+It's annoying to find a seed for a specific sequence of numbers with a real Rng.
+To facilitate easier testing, I created `FakeRng` which will continuously loop
+over a sequence of numbers provided on construction.
